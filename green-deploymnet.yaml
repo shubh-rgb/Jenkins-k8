@@ -1,0 +1,23 @@
+# green-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+      version: green
+  template:
+    metadata:
+      labels:
+        app: nginx
+        version: green
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+
