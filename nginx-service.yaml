@@ -8,9 +8,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8083
-      nodePort: 30000
-  type: NodePort
-  externalIPs:
-    - 192.168.1.100  # Specify the desired IP address
 
